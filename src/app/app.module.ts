@@ -8,7 +8,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ProdCreatePage } from '../pages/prod-create/prod-create';
 import { ProdDetailsPage } from '../pages/prod-details/prod-details';
 import { AddrCreatePage } from '../pages/addr-create/addr-create';
+import { Address } from './address.class';
 import { FormsModule } from '@angular/forms';
+import { AddressService } from './address.service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,8 +43,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    AddressService,
+    Address,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
   bootstrap: [IonicApp],
 })
-export class AppModule {}
+export class AppModule {} 

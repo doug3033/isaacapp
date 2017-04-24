@@ -15,7 +15,6 @@
 
 <ion-content padding>
 <ion-list>
-
   <ion-item>
     <ion-label floating>Street 1</ion-label>
     <ion-input type="text"></ion-input>
@@ -28,12 +27,17 @@
   
   <ion-item>
     <ion-label floating>City</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" value='{{ address.getCity() }}' disabled='true'></ion-input>
   </ion-item>
   
   <ion-item>
     <ion-label floating>State</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" value='{{ address.getState() }}' disabled='true'></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>ZipCode</ion-label>
+    <ion-input type="text" value='{{ address.getZipcode() }}' disabled='true'></ion-input>
   </ion-item>
   
   <ion-item>
